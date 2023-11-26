@@ -31,11 +31,6 @@ public class BulletMove : MonoBehaviour
             DestroyingObject();
             Debug.Log("Hited");
         }
-        else if (col.gameObject.layer == 10)
-        {
-            EnemyAi1 ems = GameObject.Find("Enemy").GetComponent<EnemyAi1>();
-            ems.TakeDamage(120);
-        }
     }
 
 

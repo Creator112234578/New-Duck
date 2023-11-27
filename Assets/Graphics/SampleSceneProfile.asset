@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   skipIterations:
     m_OverrideState: 1
     m_Value: 1
@@ -87,13 +87,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.25350916, z: 0.2938858, w: -0.54721975}
+    m_Value: {x: 1, y: 0.93457806, z: 0.93824905, w: 0.30008832}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.980791, z: 0.99780077, w: 0.12356577}
+    m_Value: {x: 1, y: 0.980791, z: 0.99780077, w: -0.04413063}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.52814806, z: 0.30379963, w: -1}
+    m_Value: {x: 1, y: 0.9409508, z: 0.9298946, w: -1}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   shadows:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0.205793, b: 0, a: 1}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
     m_OverrideState: 1
     m_Value: {r: 1, g: 0, b: 0, a: 1}
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   lift:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.91020954, z: 0.79755056, w: -0.079435065}

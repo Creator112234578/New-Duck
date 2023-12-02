@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAi1 : MonoBehaviour
+public class Zombie : MonoBehaviour
 {
     public NavMeshAgent agent;
 
@@ -103,9 +103,7 @@ public class EnemyAi1 : MonoBehaviour
         if (!alreadyAttacked)
         {
             ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position+(transform.forward * 1), Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 35f, ForceMode.Impulse);
-            //rb.AddForce(transform.up * 4f, ForceMode.Impulse);
+            
             ///End of attack code
 
             alreadyAttacked = true;

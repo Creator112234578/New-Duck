@@ -9,6 +9,8 @@ public class Kaboom : MonoBehaviour
     public GameObject KaboomEffect;
     public float Bullet;
     public float Mass;
+    public float kaboomRadius;
+    public float force;
     void Start()
     {   
         SC = GetComponent<SphereCollider>();
@@ -31,8 +33,16 @@ public class Kaboom : MonoBehaviour
     {
         if (col.gameObject.layer == 6)
         {   
-            SC.radius = 7.5f;
             Instantiate(KaboomEffect, transform.position, transform.rotation);
+            Collider[] colliders = Physics.OverlapSphere(transform.position, kaboomRadius);
+            foreach (Collider nearbyObject in colliders)
+	    {
+		Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+		if (rb != null)
+                {
+		    rb.AddExplosionForce(force, transform.position, kaboomRadius);
+                }
+	    }
             Invoke(nameof(DestroyingObject), 0.5f);
             Debug.Log("Kaboom");
         }

@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     public Transform Cam;
 
     public float shootCD;
+    public float kaboomCD;
+    public float shotgunCD;
     public bool readyToThrow;
 
     public LayerMask layer;
@@ -17,6 +19,11 @@ public class Shooting : MonoBehaviour
 
     RaycastHit hited1;
     RaycastHit hited2;
+
+    public KeyCode shoot1;
+    public KeyCode shoot2;
+    public KeyCode shotgun1;
+    public KeyCode shotgun2;
 
     public GameObject Object;
     public GameObject KaboomObject;
@@ -67,11 +74,11 @@ public class Shooting : MonoBehaviour
     }
     void WeaponSwitcher()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(shoot1) || Input.GetKeyDown(shoot2))
         {
             weapon = Weapons.pistol;
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(shotgun1) || Input.GetKeyDown(shotgun2))
         {
             weapon = Weapons.shotgun;
         }
@@ -81,7 +88,6 @@ public class Shooting : MonoBehaviour
         readyToThrow = false;
 
         Instantiate(Object, Cam.position, Cam.rotation);
-        shootCD = 0.25f;
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(false);
         Invoke(nameof(ResetShoot), shootCD);
@@ -90,19 +96,17 @@ public class Shooting : MonoBehaviour
     {   
         readyToThrow = false;
         Instantiate(KaboomObject, Cam.position, Cam.rotation);
-        shootCD = 2.5f;
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(false);
-        Invoke(nameof(ResetShoot), shootCD);
+        Invoke(nameof(ResetShoot), kaboomCD);
     }
     void Shotgun()
     {   
         readyToThrow = false;
         Instantiate(ShotgunObject, Cam.position, Cam.rotation);
-        shootCD = 0.5f;
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(false);
-        Invoke(nameof(ResetShoot), shootCD);
+        Invoke(nameof(ResetShoot), shotgunCD);
     }
     void ResetShoot()
     {

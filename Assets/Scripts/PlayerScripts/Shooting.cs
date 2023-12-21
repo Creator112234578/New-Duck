@@ -10,7 +10,12 @@ public class Shooting : MonoBehaviour
     public float shootCD;
     public float kaboomCD;
     public float shotgunCD;
+    public float currentShootCD;
+    public float currentKaboomCD;
+    public float currentShotgunCD;
     public bool readyToThrow;
+    public float shotgunRageMeter;
+    public bool shotgunRageMeterActive;
 
     public LayerMask layer;
 
@@ -23,6 +28,7 @@ public class Shooting : MonoBehaviour
     public KeyCode shoot1;
     public KeyCode shoot2;
     public KeyCode shotgun1;
+    public KeyCode shotgunRageMeterActivator;
     public KeyCode shotgun2;
 
     public GameObject Object;
@@ -42,6 +48,7 @@ public class Shooting : MonoBehaviour
     {
          weapon = Weapons.pistol;
          DuckInHand.SetActive(true);
+         shotgunRageMeterActive = false;
     }
     // Update is called once per frame
     private void Update()
@@ -50,7 +57,6 @@ public class Shooting : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.forward) * 1000, Color.green);
         if (weapon == Weapons.pistol)
         {
-
             if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToThrow == true)
             {   
                 Cam.LookAt(hited1.point);
@@ -64,12 +70,32 @@ public class Shooting : MonoBehaviour
         }
         else if (weapon == Weapons.shotgun)
         {
-
              if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToThrow == true)
              {    
                  Cam.LookAt(hited1.point);
                  Shotgun();
              }
+             if (Input.GetMouseButton(1) && shotgunRageMeter == 100)
+             {
+                 shootCD = shootCD - 0.15f;
+                 kaboomCD = kaboomCD - 1.5f;
+                 shotgunCD = shotgunCD - 0.75f;
+                 shotgunRageMeterActive = true;
+             }
+        }
+        if (shotgunRageMeterActive == true)
+        {
+            shotgunRageMeter -= Time.deltaTime * 10;
+        }
+        if (shotgunRageMeter <= 0)
+        {
+            shotgunRageMeterActive = false;
+        }
+        if (shotgunRageMeterActive == false)
+        {
+            shootCD = shootCD;
+            kaboomCD = kaboomCD;
+            shotgunCD = shotgunCD;
         }
     }
     void WeaponSwitcher()

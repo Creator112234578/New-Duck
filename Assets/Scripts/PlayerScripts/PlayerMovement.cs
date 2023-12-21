@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 	   state = MovementState.running;
 	   speed = runSpeed;
-	   rb.drag = 0.5f;
+	   rb.drag = 2.5f;
 	}
 	else if (grounded)
 	{
@@ -141,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
 	else
 	{
 	   state = MovementState.air;
-	   rb.drag = 2.5f;
+	   rb.drag = 5f;
 	}
         
 	

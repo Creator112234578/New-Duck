@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed;
     public float walkSpeed;
     public float runSpeed;
+    public float airSpeed;
     public float Drag;
     public float speedHere;
     [Header("Jump")]
@@ -121,27 +122,33 @@ public class PlayerMovement : MonoBehaviour
 
         if (dashing && dashInTheAir)
         {
-            rb.drag = Drag;
+            rb.drag = 5f;
             state = MovementState.dashing;
+            rb.mass = 5f;
             speed = dashSpeed;
+
             
         }
 	else if (grounded && Input.GetKey(runButton))
 	{
 	   state = MovementState.running;
 	   speed = runSpeed;
-	   rb.drag = 0.5f;
+	   rb.drag = 2.5f;
+           rb.mass = 5f;
 	}
 	else if (grounded)
 	{
 	   state = MovementState.walking;
 	   speed = walkSpeed;
 	   rb.drag = Drag;
+           rb.mass = 5f;
 	}
 	else
 	{
 	   state = MovementState.air;
-	   rb.drag = 2.5f;
+	   rb.drag = 5f;
+           speed = airSpeed;
+           rb.mass += Time.deltaTime * 5;
 	}
         
 	

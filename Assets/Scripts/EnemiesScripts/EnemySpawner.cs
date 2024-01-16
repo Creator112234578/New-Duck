@@ -7,13 +7,24 @@ public class EnemySpawner : MonoBehaviour
 
     public GameObject[] Enemies;
     public Transform[] EnemiesPositions;
+    public int Waves;
+    public int CurrentWaves;
+    public int EnemiesToSpawn;
+    public int[] WavesEnemieAmount;
     public int counter;
     void Update()
     {
-        foreach (GameObject Enemie in Enemies)
+        while (CurrentWaves < Waves)
         {
-            Instantiate(Enemie, EnemiesPositions[counter].position, EnemiesPositions[counter].rotation);
-            counter += 1;
+        	foreach (GameObject Enemie in Enemies)
+        	{
+            		Instantiate(Enemie, EnemiesPositions[counter].position, EnemiesPositions[counter].rotation);
+            		counter += 1;
+        	}
+                if (Enemies.Length < 0)
+                {
+                	CurrentWaves += 1;
+                }
         }
     }
 }

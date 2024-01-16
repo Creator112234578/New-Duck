@@ -10,9 +10,11 @@ public class Shooting : MonoBehaviour
     public float shootCD;
     public float kaboomCD;
     public float shotgunCD;
+    public float minigunCD;
     public float currentShootCD;
     public float currentKaboomCD;
     public float currentShotgunCD;
+    public float currentMinigunCD;
     public bool readyToThrow;
     public bool readyToShootShotgun;
     public bool readyToShootMinigun;
@@ -94,10 +96,12 @@ public class Shooting : MonoBehaviour
                  Shotgun();
              }
              if (Input.GetMouseButton(1) && shotgunRageMeter >= 100)
-             {
-                 shootCD = shootCD - 0.15f;
-                 kaboomCD = kaboomCD - 1.5f;
-                 shotgunCD = shotgunCD - 0.75f;
+            {
+                 currentShootCD = shootCD - 0.15f;
+                 currentKaboomCD = kaboomCD - 1.5f;
+                 currentShotgunCD = shotgunCD - 0.75f;
+                 currentMinigunCD = minigunCD / 2;
+                 
                  shotgunRageMeterActive = true;
              }
         }
@@ -115,13 +119,6 @@ public class Shooting : MonoBehaviour
                  Cam.LookAt(hited1.point);
                  Minigun();
              }
-             if (Input.GetMouseButton(1) && shotgunRageMeter == 100)
-             {
-                 shootCD = shootCD - 0.15f;
-                 kaboomCD = kaboomCD - 1.5f;
-                 shotgunCD = shotgunCD - 0.75f;
-                 shotgunRageMeterActive = true;
-             }
         }
         if (shotgunRageMeterActive == true)
         {
@@ -134,9 +131,10 @@ public class Shooting : MonoBehaviour
         }
         if (shotgunRageMeterActive == false)
         {
-            shootCD = shootCD;
-            kaboomCD = kaboomCD;
-            shotgunCD = shotgunCD;
+            currentShootCD = shootCD;
+            currentKaboomCD = kaboomCD;
+            currentShotgunCD = shotgunCD;
+            currentMinigunCD = minigunCD;
         }
     }
     void WeaponSwitcher()
@@ -164,14 +162,14 @@ public class Shooting : MonoBehaviour
         Instantiate(Object, Cam.position, Cam.rotation);
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(false);
-        Invoke(nameof(ResetShoot), shootCD);
+        Invoke(nameof(ResetShoot), currentShootCD);
     }
     void Minigun()
     {   
         readyToShootMinigun = false;
         Instantiate(MinigunObject, Cam.position, Cam.rotation);
         Debug.Log("WorkingShot");
-        Invoke(nameof(ResetShootMinigun), 0.225f);
+        Invoke(nameof(ResetShootMinigun), currentMinigunCD);
     }
     void Kaboom()
     {   
@@ -179,7 +177,7 @@ public class Shooting : MonoBehaviour
         Instantiate(KaboomObject, Cam.position, Cam.rotation);
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(false);
-        Invoke(nameof(ResetShoot), kaboomCD);
+        Invoke(nameof(ResetShoot), currentKaboomCD);
     }
     void Shotgun()
     {   
@@ -188,7 +186,7 @@ public class Shooting : MonoBehaviour
         Debug.Log("WorkingShot");
         DuckInHand.SetActive(true);
         shotgunRageMeter += 10;
-        Invoke(nameof(ResetShootShotgun), shotgunCD);
+        Invoke(nameof(ResetShootShotgun), currentShotgunCD);
     }
     void ResetShoot()
     {

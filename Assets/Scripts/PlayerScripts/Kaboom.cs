@@ -24,7 +24,6 @@ public class Kaboom : MonoBehaviour
     }
     void DestroyingObject()
     {
-        Destroy(this.gameObject);
         Destroy(KaboomEffect);
     }
 
@@ -43,9 +42,11 @@ public class Kaboom : MonoBehaviour
 		    rb.AddExplosionForce(force, transform.position, kaboomRadius);
                 }
 	    }
+            Destroy(this.gameObject);
             Invoke(nameof(DestroyingObject), 0.5f);
             Debug.Log("Kaboom");
         }
+       
     }
 
 

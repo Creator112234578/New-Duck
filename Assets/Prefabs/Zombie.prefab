@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2437016832072000216}
   - component: {fileID: 7555779987434026250}
   - component: {fileID: 5809406405379763702}
-  - component: {fileID: 3260559132895618053}
+  - component: {fileID: -4675985761081811542}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Untagged
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 6676702710507418600}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3966756817859253168
 MeshFilter:
@@ -132,7 +132,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &3260559132895618053
+--- !u!114 &-4675985761081811542
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,26 +141,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2496577573048883742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 296038eb702ef2642b82273813dde9df, type: 3}
+  m_Script: {fileID: 11500000, guid: d0f07b4956859744a9bfad6f9329f9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 5809406405379763702}
-  player: {fileID: 3102492244405823374, guid: 6688b703ca184ea45906a55e77675123, type: 3}
+  player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 512
-  health: 120
-  EnemyDistanceRun: 5
+    m_Bits: 128
+  health: 0
+  EnemyDistanceRun: 0
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 5
-  timeBetweenAttacks: 1
-  projectile: {fileID: 691784990967806430, guid: 7a36e2ec5339f674cb1a71e51d5a7f6b,
+  walkPointRange: 0
+  timeBetweenAttacks: 0.5
+  projectile: {fileID: 6599601511641078006, guid: 331998bb159e4204183e230030caca2b,
     type: 3}
   sightRange: 100
-  attackRange: 10
+  attackRange: 1
   playerInSightRange: 0
   playerInAttackRange: 0
 --- !u!1 &3019380264250558167

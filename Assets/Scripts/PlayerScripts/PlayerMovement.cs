@@ -225,7 +225,7 @@ public class PlayerMovement : MonoBehaviour
          
          delayedForceToApplyDirection = dashDirectionInTheAir;
 
-         Invoke(nameof(DelayedDashInPlaceForce), 0.025f);
+         Invoke(nameof(DelayedDashInPlaceForce), 0.2f);
          Invoke(nameof(ResetDash), DashDuration);
     }
 

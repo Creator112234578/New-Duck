@@ -16,7 +16,6 @@ public class ProjectileKaboom : MonoBehaviour
         SC = GetComponent<SphereCollider>();
         rigidbody.mass = Mass;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -26,26 +25,23 @@ public class ProjectileKaboom : MonoBehaviour
     {
         Destroy(KaboomEffect);
     }
-     
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.layer == 7)
-        {   
+        if (col.gameObject.layer != 11)
+        {
             Instantiate(KaboomEffect, transform.position, transform.rotation);
             Collider[] colliders = Physics.OverlapSphere(transform.position, kaboomRadius);
             foreach (Collider nearbyObject in colliders)
-	    {
-		Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
-		if (rb != null)
+            {
+                Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+                if (rb != null)
                 {
-		    rb.AddExplosionForce(force, transform.position, kaboomRadius);
+                    rb.AddExplosionForce(force, transform.position, kaboomRadius);
                 }
-	    }
+            }
             Destroy(this.gameObject);
             Invoke(nameof(DestroyingObject), 0.5f);
             Debug.Log("Kaboom");
         }
     }
-
-
 }

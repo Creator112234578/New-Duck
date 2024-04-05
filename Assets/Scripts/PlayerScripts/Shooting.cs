@@ -68,8 +68,6 @@ public class Shooting : MonoBehaviour
         Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.forward) * 1000, Color.green);
         if (weapon == Weapons.pistol)
         {
-            
-           
             if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToThrow == true)
             {   
                 Cam.LookAt(hited1.point);
@@ -83,14 +81,7 @@ public class Shooting : MonoBehaviour
         }
         else if (weapon == Weapons.shotgun)
         {
-             
-             
              if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToShootShotgun == true)
-             {    
-                 Cam.LookAt(hited1.point);
-                 Shotgun();
-             }
-             if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, enemy) && Input.GetMouseButton(0) && readyToShootShotgun == true)
              {    
                  Cam.LookAt(hited1.point);
                  Shotgun();
@@ -107,14 +98,7 @@ public class Shooting : MonoBehaviour
         }
         else if (weapon == Weapons.minigun)
         {
-             
-             
              if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToShootMinigun == true)
-             {    
-                 Cam.LookAt(hited1.point);
-                 Minigun();
-             }
-             if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, enemy) && Input.GetMouseButton(0) && readyToShootShotgun == true)
              {    
                  Cam.LookAt(hited1.point);
                  Minigun();

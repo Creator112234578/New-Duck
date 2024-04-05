@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 2719734503783220564}
   SC: {fileID: 6395496912621363143}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 566166996896135372}
   SC: {fileID: 6201136916513424751}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -1361,7 +1361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 4595503385135885191}
   SC: {fileID: 4214954698145985546}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 2170403208531171820}
   SC: {fileID: 1147872741028721031}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 8725226328052685401}
   SC: {fileID: 6461848862609455416}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -1753,7 +1753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 6961007839148017645}
   SC: {fileID: 4332772913889388257}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 2095104042174569468}
   SC: {fileID: 1364602616558767362}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -2389,7 +2389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5995893557184311632}
   - component: {fileID: 7842999792898673893}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: shotgunDucks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ Transform:
   - {fileID: 1416743656740025907}
   - {fileID: 7142662786759625364}
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7842999792898673893
 MonoBehaviour:
@@ -2432,7 +2432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f6dcbb4aaeb64aa1c72f307999c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotgunScript: {fileID: 0}
   shotgunDucksFolder: {fileID: 5995893557184311632}
 --- !u!1 &5814467888089298064
 GameObject:
@@ -2926,7 +2925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 2205163547932094246}
   SC: {fileID: 4877414563944009251}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1
@@ -3029,7 +3028,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 3592984231188213308}
   SC: {fileID: 260844473909513733}
-  Bullet: 5
+  Bullet: 8
   Mass: 1
   Spread: 0
   maxSpread: 0.1

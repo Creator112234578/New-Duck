@@ -19,10 +19,9 @@ public class Strange : MonoBehaviour
     {
          Projectile.Translate(Vector3.forward * Speed * Time.deltaTime);
          Speed += 0.1f;
-         if (Speed > 6)
+         if (Speed < 50)
          {
             Projectile.LookAt(PlayerPosition.position);
          }
-         
     }
 }

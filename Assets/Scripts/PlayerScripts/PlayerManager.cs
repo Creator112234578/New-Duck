@@ -20,7 +20,6 @@ public class PlayerManager : MonoBehaviour
         isGameOver = false;
         playerHP = 100;        
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,8 +37,6 @@ public class PlayerManager : MonoBehaviour
             easeSlider.value = Mathf.Lerp(easeSlider.value, playerHP, lerpHealth);
         }
     }
-            
-
     public IEnumerator Damage (int damageAmount)
     {
         bloodOverlay.SetActive(true);

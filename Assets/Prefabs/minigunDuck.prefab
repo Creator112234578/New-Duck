@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7246352213511148767}
   - component: {fileID: 4289768071760443831}
   - component: {fileID: 8419117503911055515}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7409358264352583942}
   - component: {fileID: 722784775242140022}
   - component: {fileID: 789291008840008775}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: minigunDuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3928732231685654657}
   - component: {fileID: 836714572341082774}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

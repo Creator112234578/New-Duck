@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8470146860417428184}
   - component: {fileID: 6319017740006279853}
   - component: {fileID: 7506247846283083168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: normalDuck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 6319017740006279853}
   SC: {fileID: 7506247846283083168}
-  Bullet: 5
+  Bullet: 5.5
   Mass: 1
 --- !u!54 &6319017740006279853
 Rigidbody:

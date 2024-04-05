@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Explosives
+  - Enemy
+  - Doors
   layers:
   - Default
   - TransparentFX
@@ -11,17 +14,17 @@ TagManager:
   - 
   - Water
   - UI
+  - Ground
+  - Player
+  - Duck
+  - 
+  - Skeleton
+  - Zombie
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ShotgunDuck
+  - KaboomDuck
+  - MinigunDuck
   - 
   - 
   - 

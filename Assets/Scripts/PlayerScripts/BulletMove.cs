@@ -26,19 +26,19 @@ public class BulletMove : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.layer == 6)
+        if (col.gameObject.layer == 8)
         {
             DestroyingObject();
             Debug.Log("Hited");
         }
-        else if (col.gameObject.layer == 10)
+        else if (col.gameObject.layer == 7)
         {
             Skeleton ems = GameObject.Find("Skeleton").GetComponent<Skeleton>();
             DestroyingObject();
             ems.TakeDamage(120);
             Debug.Log("Damage deal't");
         }
-        else if (col.gameObject.layer == 11)
+        else if (col.gameObject.layer == 9)
         {
             Zombie ems1 = GameObject.Find("Zombie").GetComponent<Zombie>();
             DestroyingObject();

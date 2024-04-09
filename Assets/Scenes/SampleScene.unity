@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 79433514}
   - component: {fileID: 79433513}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 179022206}
   - component: {fileID: 179022205}
   - component: {fileID: 179022204}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 191088892}
   - component: {fileID: 191088891}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286073325}
   - component: {fileID: 286073324}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,14 +620,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395027d80c0b0804997c2263bbeb11d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 1000
-  sensY: 1000
+  sensX: 250
+  sensY: 250
   orientation: {fileID: 391831215}
   XRotation: 0
   YRotation: 0
   GroundUNow:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   grounded: 0
   Item: {fileID: 0}
   Player: {fileID: 0}
@@ -646,13 +646,28 @@ MonoBehaviour:
   DuckInHand: {fileID: 48774318}
   Cam: {fileID: 809959502}
   shootCD: 0.5
+  kaboomCD: 0
+  shotgunCD: 0
+  currentShootCD: 0
+  currentKaboomCD: 0
+  currentShotgunCD: 0
   readyToThrow: 1
+  shotgunRageMeter: 0
+  shotgunRageMeterActive: 0
   layer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 896
+  shoot1: 257
+  shoot2: 0
+  shotgun1: 258
+  shotgunRageMeterActivator: 0
+  shotgun2: 282
   Object: {fileID: 1065222235251414202, guid: d4cd0d9b07f90814f8c3eb6d503190f8, type: 3}
   KaboomObject: {fileID: 3801371880988320337, guid: e8a0c3921a82ce44fbb539571154e08a,
     type: 3}
+  ShotgunObject: {fileID: 8551457245519907431, guid: 31b8beb8c220f95418716ebddeeaa490,
+    type: 3}
+  weapon: 0
 --- !u!4 &391831215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3022512234351038503, guid: 6688b703ca184ea45906a55e77675123,
@@ -671,7 +686,7 @@ GameObject:
   - component: {fileID: 399429594}
   - component: {fileID: 399429593}
   - component: {fileID: 399429592}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +987,7 @@ GameObject:
   - component: {fileID: 803128216}
   - component: {fileID: 803128215}
   - component: {fileID: 803128214}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1308,8 +1323,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2496577573048883742, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496577573048883742, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 7743911595024175031, guid: e9be0b8d46e3c0445a0f0258c752389b,
+        type: 3}
+    - target: {fileID: 3260559132895618053, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
+      propertyPath: attackRange
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
+      propertyPath: EnemyDistanceRun
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: dc6f0e0f3fdb25743ba4d06385bb94a6,
+        type: 3}
+      propertyPath: whatIsPlayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1326,7 +1372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046361017}
   - component: {fileID: 1046361016}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,7 +1425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1105162489}
   - component: {fileID: 1105162488}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1432,7 +1478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1191150830}
   - component: {fileID: 1191150829}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1998,7 +2044,7 @@ GameObject:
   - component: {fileID: 1774021157}
   - component: {fileID: 1774021156}
   - component: {fileID: 1774021155}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2309,10 +2355,20 @@ PrefabInstance:
       propertyPath: cameraRotation
       value: 
       objectReference: {fileID: 330585548}
+    - target: {fileID: 586371127254178184, guid: 6688b703ca184ea45906a55e77675123,
+        type: 3}
+      propertyPath: GroundUNow.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 646691571575717964, guid: 6688b703ca184ea45906a55e77675123,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 646691571575717964, guid: 6688b703ca184ea45906a55e77675123,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3102492244405823374, guid: 6688b703ca184ea45906a55e77675123,
         type: 3}
@@ -2525,8 +2581,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2496577573048883742, guid: ddfad39322fe0ea4aa27411db37caf63,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496577573048883742, guid: ddfad39322fe0ea4aa27411db37caf63,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: ddfad39322fe0ea4aa27411db37caf63,
+        type: 3}
+      propertyPath: attackRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: ddfad39322fe0ea4aa27411db37caf63,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260559132895618053, guid: ddfad39322fe0ea4aa27411db37caf63,
+        type: 3}
+      propertyPath: whatIsPlayer.m_Bits
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

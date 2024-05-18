@@ -34,8 +34,16 @@ public class Shotgun : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.layer == 6)
+        if (col.gameObject.layer == 6 || col.gameObject.layer == 10 || col.gameObject.layer == 11)
         {   
+            DestroyingObject();
+            Debug.Log("Hited");
+        }
+    }
+    public void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.layer == 10 || col.gameObject.layer == 11)
+        {
             DestroyingObject();
             Debug.Log("Hited");
         }

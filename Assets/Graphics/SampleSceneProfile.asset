@@ -93,13 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
   m_Name: SplitToning
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.205793, b: 0, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
   highlights:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.7684277, b: 0.6650944, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   balance:
     m_OverrideState: 1
     m_Value: 21

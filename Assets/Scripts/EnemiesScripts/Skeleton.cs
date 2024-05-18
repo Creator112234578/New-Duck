@@ -12,6 +12,8 @@ public class Skeleton : MonoBehaviour
 
     public float health;
 
+    public EnemyHealth damageHealth;
+
     public float EnemyDistanceRun = 4.0f;
 
     //Patroling
@@ -36,7 +38,7 @@ public class Skeleton : MonoBehaviour
 
     private void Update()
     {
-
+        
         
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
@@ -61,6 +63,7 @@ public class Skeleton : MonoBehaviour
         {
             AttackPlayer();
         }
+        TakeDamage();
     }
 
     private void Patroling()
@@ -117,9 +120,9 @@ public class Skeleton : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage()
     {
-        health -= damage;
+        health = damageHealth.HP;
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }

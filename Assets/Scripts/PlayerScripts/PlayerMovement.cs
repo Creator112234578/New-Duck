@@ -46,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     [Header("State")]
     public MovementState state;
+    public bool pistolAvaliable;
+    public bool shotgunAvaliable;
+    public bool minigunAvaliable;
     public enum MovementState
     {
 	walking,
@@ -246,6 +249,21 @@ public class PlayerMovement : MonoBehaviour
     private void ResetDash()
     {
          dashing = false;
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Pistol")
+        {
+            pistolAvaliable = true;
+        }
+        if (other.tag == "Shotgun")
+        {
+            shotgunAvaliable = true;
+        }
+        if (other.tag == "Minigun")
+        {
+            minigunAvaliable = true;
+        }
     }
 
 }

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7495389252260572281}
   - component: {fileID: 2352188318996270363}
   - component: {fileID: 3403242071687223047}
-  - component: {fileID: 1475299060152689557}
   m_Layer: 0
   m_Name: RocketBoss
   m_TagString: Explosives
@@ -105,7 +104,7 @@ MonoBehaviour:
   Bullet: 0
   Mass: 5
   kaboomRadius: 10
-  force: 100000
+  force: 150000
 --- !u!114 &3403242071687223047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,19 +121,6 @@ MonoBehaviour:
   Player: []
   Speed: 5
   PlayerPosition: {fileID: 0}
---- !u!114 &1475299060152689557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842954256421252103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef90bbb78fb9934c9b611b285c7a36d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageCount: 10
 --- !u!1 &7441588687162968504
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7555779987434026250}
   - component: {fileID: 5809406405379763702}
   - component: {fileID: 3260559132895618053}
+  - component: {fileID: 1157947072282592539}
   m_Layer: 10
   m_Name: Skeleton
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 6676702710507418600}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3966756817859253168
 MeshFilter:
@@ -153,6 +154,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   health: 120
+  damageHealth: {fileID: 1157947072282592539}
   EnemyDistanceRun: 5
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
@@ -163,6 +165,19 @@ MonoBehaviour:
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!114 &1157947072282592539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2496577573048883742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96975d854b9dc4b9f489d3a5fbbeca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 100
 --- !u!1 &3019380264250558167
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +189,6 @@ GameObject:
   - component: {fileID: 6676702710507418600}
   - component: {fileID: 2642177437203352142}
   - component: {fileID: 5420835129360440001}
-  - component: {fileID: 4079275656344329434}
   m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
@@ -247,24 +261,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4079275656344329434
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3019380264250558167}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

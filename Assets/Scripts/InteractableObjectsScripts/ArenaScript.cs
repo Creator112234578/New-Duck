@@ -4,25 +4,92 @@ using UnityEngine;
 
 public class ArenaScript : MonoBehaviour
 {
-    public List<Transform> targets = new List<Transform>();
-    public List<Vector3> pos = new List<Vector3>();
+    public List<Transform> Enemies;
+    public List<Transform> EnemiesInWave;
+    public List<Transform> EnemiesInWaveSetter;
+
+    public List<int> WavesEnemieAmount;
+    public int Waves;
     public int counter;
-    public bool move;
+    public bool counterNew;
+    public int CountdownEnemy;
+    public List<Transform> EnemiesToSpawn;
+    public List<Vector3> ObjectPosition;
+    public List<Vector3> ObjectToSpawnPosition;
+    public Transform SpawnerWaveReseter;
     void Start()
     {
-        move = false;
+        List<Transform> EnemiesToSpawn = new List<Transform>();
+        List<Transform> EnemiesInWave = new List<Transform>();
+        List<int> WavesEnemieAmount = new List<int>();
+        List<Transform> EnemiesInWaveSetter = new List<Transform>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (move == true)
+        foreach (Transform Enemie in Enemies)
         {
-            foreach (Transform target in targets)
+            if (Enemie == null)
             {
-                target.localPosition = pos[counter];
+                Enemies.Remove(Enemie);
+            }
+        }
+        foreach (Transform Enemie2 in EnemiesToSpawn)
+        {
+            if (Enemie2 == null)
+            {
+                EnemiesToSpawn.Remove(Enemie2);
+            }
+        }
+        foreach (Vector3 Object in ObjectPosition)
+        {
+            if (Object == null)
+            {
+                ObjectPosition.Remove(Object);
+            }
+        }
+        foreach (Vector3 Object in ObjectToSpawnPosition)
+        {
+            if (Object == null)
+            {
+                ObjectToSpawnPosition.Remove(Object);
+            }
+        }
+        if (counterNew == true)
+        {
+            if (counter < WavesEnemieAmount[Waves])
+            {
+                ObjectToSpawnPosition.Add(ObjectPosition[counter]);
+                EnemiesToSpawn.Add(Enemies[counter]);
                 counter += 1;
             }
+            else
+            {
+                foreach (Transform Enemie1 in EnemiesToSpawn)
+                {
+                    foreach (Vector3 Object in ObjectToSpawnPosition)
+                    {
+                        Enemie1.localPosition = Object;
+                        CountdownEnemy += 1;
+                    }
+                }
+                if (EnemiesToSpawn.Count == 0)
+                {
+                    ObjectToSpawnPosition.Clear();
+                    EnemiesToSpawn.Clear();
+                    CountdownEnemy = 0;
+                    Waves += 1;
+                    counter = 0;
+                }
+            }
+        }
+
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            counterNew = true;
+
         }
     }
 }

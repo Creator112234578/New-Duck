@@ -240,6 +240,8 @@ GameObject:
   - component: {fileID: 2719734503783220564}
   - component: {fileID: 6395496912621363143}
   - component: {fileID: 1776359435670103999}
+  - component: {fileID: 4897002806602252859}
+  - component: {fileID: 2119716349324391620}
   m_Layer: 0
   m_Name: normalDuck (1)
   m_TagString: Untagged
@@ -331,6 +333,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &4897002806602252859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585168273533357172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &2119716349324391620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585168273533357172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 585168273533357172}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &1110384103465738152
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,6 +912,8 @@ GameObject:
   - component: {fileID: 566166996896135372}
   - component: {fileID: 6201136916513424751}
   - component: {fileID: 7292149504185102137}
+  - component: {fileID: 5718375345726238126}
+  - component: {fileID: 4157950426806337}
   m_Layer: 0
   m_Name: normalDuck (7)
   m_TagString: Untagged
@@ -973,6 +1005,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &5718375345726238126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405557506151882718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &4157950426806337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2405557506151882718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 2405557506151882718}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &2619080893045095396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,6 +1335,8 @@ GameObject:
   - component: {fileID: 4595503385135885191}
   - component: {fileID: 4214954698145985546}
   - component: {fileID: 7222905308116342473}
+  - component: {fileID: 6527450981871739072}
+  - component: {fileID: 4401632968343358616}
   m_Layer: 0
   m_Name: normalDuck (6)
   m_TagString: Untagged
@@ -1366,6 +1428,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &6527450981871739072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878695856349534802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &4401632968343358616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878695856349534802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 2878695856349534802}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &3463601647499840296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,6 +1551,8 @@ GameObject:
   - component: {fileID: 2170403208531171820}
   - component: {fileID: 1147872741028721031}
   - component: {fileID: 6594096537768821834}
+  - component: {fileID: 5086529694719286978}
+  - component: {fileID: 4579968042742166730}
   m_Layer: 0
   m_Name: normalDuck (3)
   m_TagString: Untagged
@@ -1552,6 +1644,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &5086529694719286978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822383065475233449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &4579968042742166730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822383065475233449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 3822383065475233449}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &3863815033479590894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1564,6 +1684,8 @@ GameObject:
   - component: {fileID: 8725226328052685401}
   - component: {fileID: 6461848862609455416}
   - component: {fileID: 5284203021760801401}
+  - component: {fileID: 2574814213263264890}
+  - component: {fileID: 979749104995649948}
   m_Layer: 0
   m_Name: normalDuck (9)
   m_TagString: Untagged
@@ -1655,6 +1777,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &2574814213263264890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863815033479590894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &979749104995649948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863815033479590894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 3863815033479590894}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &4786960621559817011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1817,8 @@ GameObject:
   - component: {fileID: 6961007839148017645}
   - component: {fileID: 4332772913889388257}
   - component: {fileID: 7225990359667369215}
+  - component: {fileID: 5035101169906747719}
+  - component: {fileID: 4112788274785780521}
   m_Layer: 0
   m_Name: normalDuck (5)
   m_TagString: Untagged
@@ -1758,6 +1910,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &5035101169906747719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786960621559817011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &4112788274785780521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786960621559817011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 4786960621559817011}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &4889273958172127295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,6 +2468,8 @@ GameObject:
   - component: {fileID: 2095104042174569468}
   - component: {fileID: 1364602616558767362}
   - component: {fileID: 5637431275898547079}
+  - component: {fileID: 3549948016016478106}
+  - component: {fileID: 7939386763944604799}
   m_Layer: 0
   m_Name: normalDuck (2)
   m_TagString: Untagged
@@ -2379,6 +2561,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &3549948016016478106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554385418458632353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &7939386763944604799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554385418458632353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 5554385418458632353}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &5781440150275300698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,6 +3049,8 @@ GameObject:
   - component: {fileID: 2205163547932094246}
   - component: {fileID: 4877414563944009251}
   - component: {fileID: 2394840861043733820}
+  - component: {fileID: 7044965177676582687}
+  - component: {fileID: 6252507065375079808}
   m_Layer: 0
   m_Name: normalDuck (8)
   m_TagString: Untagged
@@ -2930,6 +3142,34 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &7044965177676582687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783063445558603042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &6252507065375079808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8783063445558603042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 8783063445558603042}
+  Layer: 10
+  Layer1: 11
 --- !u!1 &9021007027128791804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,6 +3182,8 @@ GameObject:
   - component: {fileID: 3592984231188213308}
   - component: {fileID: 260844473909513733}
   - component: {fileID: 136843879237820609}
+  - component: {fileID: 7765087784903295308}
+  - component: {fileID: 5911727674180272653}
   m_Layer: 0
   m_Name: normalDuck (4)
   m_TagString: Untagged
@@ -3033,3 +3275,31 @@ MonoBehaviour:
   Spread: 0
   maxSpread: 0.1
   minSpread: 0.1
+--- !u!114 &7765087784903295308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021007027128791804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &5911727674180272653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021007027128791804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3008eeb4d8252444a71b4fdd4c869f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToDelete: {fileID: 9021007027128791804}
+  Layer: 10
+  Layer1: 11

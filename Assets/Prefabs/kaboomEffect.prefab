@@ -29326,7 +29326,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5906942446124260054}
   - component: {fileID: 8059956171218542355}
-  m_Layer: 0
+  - component: {fileID: 2933316022691813643}
+  - component: {fileID: 7443475326419726815}
+  - component: {fileID: 5962093530634313152}
+  m_Layer: 15
   m_Name: kaboomEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29353,7 +29356,7 @@ Transform:
   - {fileID: 3407007010893285293}
   - {fileID: 7171685759009102691}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8059956171218542355
 MonoBehaviour:
@@ -29369,6 +29372,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToDestroy: {fileID: 7960977482665587685}
   deletingSpeed: 0.5
+--- !u!135 &2933316022691813643
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960977482665587685}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7443475326419726815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960977482665587685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+--- !u!114 &5962093530634313152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960977482665587685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef90bbb78fb9934c9b611b285c7a36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 10
 --- !u!1 &8270698546348679068
 GameObject:
   m_ObjectHideFlags: 0

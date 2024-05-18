@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
     public bool readyToShootMinigun;
     public float shotgunRageMeter;
     public bool shotgunRageMeterActive;
+    public PlayerMovement playerMovement;
 
     public LayerMask layer;
     public LayerMask enemy;
@@ -66,7 +67,7 @@ public class Shooting : MonoBehaviour
     {
         WeaponSwitcher();
         Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.forward) * 1000, Color.green);
-        if (weapon == Weapons.pistol)
+        if (weapon == Weapons.pistol & playerMovement.pistolAvaliable == true)
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToThrow == true)
             {   
@@ -79,7 +80,7 @@ public class Shooting : MonoBehaviour
                 Kaboom();
             }
         }
-        else if (weapon == Weapons.shotgun)
+        else if (weapon == Weapons.shotgun & playerMovement.shotgunAvaliable == true)
         {
              if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToShootShotgun == true)
              {    
@@ -96,7 +97,7 @@ public class Shooting : MonoBehaviour
                  shotgunRageMeterActive = true;
              }
         }
-        else if (weapon == Weapons.minigun)
+        else if (weapon == Weapons.minigun & playerMovement.minigunAvaliable == true)
         {
              if (Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out hited1, 1000, layer) && Input.GetMouseButton(0) && readyToShootMinigun == true)
              {    

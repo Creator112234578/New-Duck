@@ -183,10 +183,10 @@ MonoBehaviour:
   SC: {fileID: 8377664857325133836}
   KaboomEffect: {fileID: 7960977482665587685, guid: 3bdc67d57b4ff5d4eae42fed737f0c29,
     type: 3}
-  Bullet: 5
+  Bullet: 5.5
   Mass: 5
   kaboomRadius: 10
-  force: 100000
+  force: 150000
 --- !u!1 &9198086658230206260
 GameObject:
   m_ObjectHideFlags: 0

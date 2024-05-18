@@ -31,7 +31,7 @@ public class BulletMove : MonoBehaviour
             DestroyingObject();
             Debug.Log("Hited");
         }
-        else if (col.gameObject.layer == 10)
+        /* else if (col.gameObject.layer == 10)
         {
             Skeleton ems = GameObject.Find("Skeleton").GetComponent<Skeleton>();
             DestroyingObject();
@@ -44,6 +44,6 @@ public class BulletMove : MonoBehaviour
             DestroyingObject();
             ems1.TakeDamage(120);
             Debug.Log("Damage deal't");
-        }
+        }*/
     }
 }

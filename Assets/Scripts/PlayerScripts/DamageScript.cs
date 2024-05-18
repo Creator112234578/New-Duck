@@ -13,4 +13,11 @@ public class DamageScript : MonoBehaviour
             StartCoroutine(FindObjectOfType<PlayerManager>().Damage(damageCount));
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 7)
+        {
+            StartCoroutine(FindObjectOfType<PlayerManager>().Damage(damageCount));
+        }
+    }
 }

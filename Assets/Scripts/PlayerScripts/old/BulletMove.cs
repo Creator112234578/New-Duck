@@ -40,9 +40,16 @@ public class BulletMove : MonoBehaviour
         }
         else if (col.gameObject.layer == 9)
         {
-            Zombie ems1 = GameObject.Find("Zombie").GetComponent<Zombie>();
+            Zombie ems1 = GameObject.Find("Skeleton").GetComponent<Zombie>();
             DestroyingObject();
             ems1.TakeDamage(120);
+            Debug.Log("Damage deal't");
+        }
+        else if (col.gameObject.layer == 10)
+        {
+            Miniboss ems2 = GameObject.Find("Skeleton").GetComponent<Miniboss>();
+            DestroyingObject();
+            ems2.TakeDamage(120);
             Debug.Log("Damage deal't");
         }
     }

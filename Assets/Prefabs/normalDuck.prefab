@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1225811249831681539}
   - component: {fileID: 6319017740006279853}
   - component: {fileID: 7506247846283083168}
-  - component: {fileID: -2159086387066485492}
+  - component: {fileID: -4140480622222711930}
+  - component: {fileID: -6337568293831224144}
   m_Layer: 0
   m_Name: normalDuck
   m_TagString: Untagged
@@ -84,7 +85,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2159086387066485492
+--- !u!114 &-4140480622222711930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,10 +97,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b33ad6f1cb0964d9de56ad4ebbd52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 6319017740006279853}
-  SC: {fileID: 7506247846283083168}
-  Bullet: 3
-  Mass: 0.5
+  rigidbody: {fileID: 0}
+  SC: {fileID: 0}
+  Bullet: 0
+  Mass: 0
+--- !u!114 &-6337568293831224144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065222235251414202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566aa4360432079488a76653fbfa0208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2552288677778002929
 GameObject:
   m_ObjectHideFlags: 0

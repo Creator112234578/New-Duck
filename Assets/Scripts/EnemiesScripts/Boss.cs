@@ -20,7 +20,6 @@ public class Boss : MonoBehaviour
     public Transform GoHere;
     public bool Chased;
     public bool Helicopter;
-    public EnemyHealth health;
     public bool Attacks;
     public bool Cutscene;
     public float Health;
@@ -48,7 +47,6 @@ public class Boss : MonoBehaviour
     }
     void Update()
     {
-        Health = health.HP;
         if (healthSlider.value != Health)
         {
             healthSlider.value = Health;
@@ -96,6 +94,10 @@ public class Boss : MonoBehaviour
          {
             rb.AddForce(Vector3.down * 2.5f, ForceMode.Impulse);
          }  
+    }
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
     }
     void AttacksChangeFunction()
     {

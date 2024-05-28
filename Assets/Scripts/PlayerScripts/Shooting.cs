@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -44,8 +45,9 @@ public class Shooting : MonoBehaviour
     public GameObject ShotgunObject;
     public GameObject MinigunObject;
 
-
     public Weapons weapon;
+
+    public Slider rageSlider;
 
     public enum Weapons
     {
@@ -64,6 +66,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        rageSlider.value = shotgunRageMeter;
         WeaponSwitcher();
         Debug.DrawRay(transform.position, transform.TransformDirection (Vector3.forward) * 1000, Color.green);
         if (weapon == Weapons.pistol)

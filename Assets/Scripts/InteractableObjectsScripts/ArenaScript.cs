@@ -4,25 +4,43 @@ using UnityEngine;
 
 public class ArenaScript : MonoBehaviour
 {
-    public List<Transform> targets = new List<Transform>();
-    public List<Vector3> pos = new List<Vector3>();
-    public int counter;
-    public bool move;
+    public List<Transform> Enemies;
+    public bool counterNew;
+    public int Count;
+    public List<Vector3> WhereToGo;
     void Start()
     {
-        move = false;
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
-        if (move == true)
+        foreach (Transform Enemie in Enemies)
         {
-            foreach (Transform target in targets)
+            if (Enemie == null)
             {
-                target.localPosition = pos[counter];
-                counter += 1;
+                Enemies.Remove(Enemie);
             }
         }
+        foreach (Vector3 whereToGo in WhereToGo)
+        {
+            if (whereToGo == null)
+            {
+                WhereToGo.Remove(whereToGo);
+            }
+        }
+        if (counterNew == true)
+        {
+            Enemies[Count].position = WhereToGo[Count];
+            Count += 1;
+        }
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            counterNew = true;
+        }
+    }
+
 }
+

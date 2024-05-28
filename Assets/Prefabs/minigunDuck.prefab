@@ -95,6 +95,9 @@ GameObject:
   - component: {fileID: 7409358264352583942}
   - component: {fileID: 722784775242140022}
   - component: {fileID: 789291008840008775}
+  - component: {fileID: -5385973989413035783}
+  - component: {fileID: 1092259874329645648}
+  - component: {fileID: 3538894479416015712}
   m_Layer: 16
   m_Name: minigunDuck
   m_TagString: Untagged
@@ -186,6 +189,49 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-5385973989413035783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493818150546815904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 3
+--- !u!114 &1092259874329645648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493818150546815904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa476ca35fd8cb42a41dc1b52b42d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 2493818150546815904}
+  layer1: 6
+  layer2: 11
+--- !u!114 &3538894479416015712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493818150546815904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa476ca35fd8cb42a41dc1b52b42d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 2493818150546815904}
+  layer1: 10
+  layer2: 18
 --- !u!1 &8673691111904552850
 GameObject:
   m_ObjectHideFlags: 0

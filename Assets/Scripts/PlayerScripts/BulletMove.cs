@@ -31,19 +31,19 @@ public class BulletMove : MonoBehaviour
             DestroyingObject();
             Debug.Log("Hited");
         }
-        else if (col.gameObject.layer == 10)
+        /*else if (col.gameObject.layer == 10)
         {
-            Skeleton ems = GameObject.Find("Skeleton").GetComponent<Skeleton>();
+            Skeleton ems = col.gameObject.GetComponent<Skeleton>();
             DestroyingObject();
             ems.TakeDamage(120);
             Debug.Log("Damage deal't");
         }
         else if (col.gameObject.layer == 11)
         {
-            Zombie ems1 = GameObject.Find("Zombie").GetComponent<Zombie>();
+            Zombie ems1 = col.gameObject.GetComponent<Zombie>();
             DestroyingObject();
             ems1.TakeDamage(120);
             Debug.Log("Damage deal't");
-        }
+        }*/
     }
 }

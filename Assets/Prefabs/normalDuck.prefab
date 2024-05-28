@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 8470146860417428184}
   - component: {fileID: 6319017740006279853}
   - component: {fileID: 7506247846283083168}
+  - component: {fileID: 476031303968705310}
+  - component: {fileID: 4732817457955845814}
+  - component: {fileID: 433065727672425437}
   m_Layer: 8
   m_Name: normalDuck
   m_TagString: Untagged
@@ -34,7 +37,7 @@ Transform:
   - {fileID: 3302026534315257416}
   - {fileID: 2230384650247235529}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8470146860417428184
 MonoBehaviour:
@@ -100,6 +103,49 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &476031303968705310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065222235251414202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7450bdfaf9696cf4997dab3a21085669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 5
+--- !u!114 &4732817457955845814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065222235251414202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa476ca35fd8cb42a41dc1b52b42d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 1065222235251414202}
+  layer1: 6
+  layer2: 11
+--- !u!114 &433065727672425437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065222235251414202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa476ca35fd8cb42a41dc1b52b42d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 1065222235251414202}
+  layer1: 10
+  layer2: 18
 --- !u!1 &2552288677778002929
 GameObject:
   m_ObjectHideFlags: 0

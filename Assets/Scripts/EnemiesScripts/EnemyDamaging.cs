@@ -8,9 +8,28 @@ public class EnemyDamaging : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 10)
         {
-            StartCoroutine(FindObjectOfType<EnemyHealth>().EnemyDamaged(damageCount));
+            Skeleton ems = collision.gameObject.GetComponent<Skeleton>();
+            ems.TakeDamage(damageCount);
+        }
+        if (collision.gameObject.layer == 18)
+        {
+            Boss ems1 = collision.gameObject.GetComponent<Boss>();
+            ems1.TakeDamage(damageCount);
+        }
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            Skeleton ems = collision.gameObject.GetComponent<Skeleton>();
+            ems.TakeDamage(damageCount);
+        }
+        if (collision.gameObject.layer == 18)
+        {
+            Boss ems1 = collision.gameObject.GetComponent<Boss>();
+            ems1.TakeDamage(damageCount);
         }
     }
 }

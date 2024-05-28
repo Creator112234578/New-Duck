@@ -71,7 +71,6 @@ public class EnemySpawner : MonoBehaviour
         if (other.tag == "Player")
         {
             counterNew = true;
-
         }
     }
     

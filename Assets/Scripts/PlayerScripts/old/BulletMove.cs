@@ -31,25 +31,11 @@ public class BulletMove : MonoBehaviour
             DestroyingObject();
             Debug.Log("Hited");
         }
-        else if (col.gameObject.layer == 7)
+        else if (col.gameObject.layer == 7 || col.gameObject.layer == 9 || col.gameObject.layer == 10 || col.gameObject.layer == 11 || col.gameObject.layer == 12 || col.gameObject.layer == 13)
         {
-            Skeleton ems = GameObject.Find("Skeleton").GetComponent<Skeleton>();
+            Skeleton ems = col.gameObject.GetComponent<Skeleton>();
             DestroyingObject();
             ems.TakeDamage(120);
-            Debug.Log("Damage deal't");
-        }
-        else if (col.gameObject.layer == 9)
-        {
-            Zombie ems1 = GameObject.Find("Skeleton").GetComponent<Zombie>();
-            DestroyingObject();
-            ems1.TakeDamage(120);
-            Debug.Log("Damage deal't");
-        }
-        else if (col.gameObject.layer == 10)
-        {
-            Miniboss ems2 = GameObject.Find("Skeleton").GetComponent<Miniboss>();
-            DestroyingObject();
-            ems2.TakeDamage(120);
             Debug.Log("Damage deal't");
         }
     }

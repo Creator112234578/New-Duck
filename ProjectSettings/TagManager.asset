@@ -17,11 +17,11 @@ TagManager:
   - Ground
   - EnemyZombie
   - EnemyMiniboss
+  - EnemyManki
+  - EnemyBoss2
+  - EnemyBossFinal
   - 
-  - 
-  - 
-  - 
-  - 
+  - MinibossProjectile
   - 
   - 
   - 

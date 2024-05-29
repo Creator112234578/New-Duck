@@ -97,10 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b33ad6f1cb0964d9de56ad4ebbd52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
-  SC: {fileID: 0}
-  Bullet: 0
-  Mass: 0
+  rigidbody: {fileID: 6319017740006279853}
+  SC: {fileID: 7506247846283083168}
+  Bullet: 5.5
+  Mass: 1
 --- !u!114 &-6337568293831224144
 MonoBehaviour:
   m_ObjectHideFlags: 0

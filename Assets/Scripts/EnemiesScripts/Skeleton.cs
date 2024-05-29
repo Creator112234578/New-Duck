@@ -77,6 +77,10 @@ public class Skeleton : MonoBehaviour
         {
             AttackPlayer();
         }
+        if (health <= 0)
+        {
+            Invoke(nameof(DestroyEnemy), 0.05f);
+        }
     }
 
     private void Patroling()
@@ -149,8 +153,6 @@ public class Skeleton : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
     private void DestroyEnemy()
     {

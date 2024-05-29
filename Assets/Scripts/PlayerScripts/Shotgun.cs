@@ -13,6 +13,7 @@ public class Shotgun : MonoBehaviour
     public float minSpread;
     void Start()
     {
+        
         Spread = Random.Range(minSpread, maxSpread);
         rigidbody.mass = Mass;
     }
@@ -20,6 +21,7 @@ public class Shotgun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         rigidbody.AddForce(transform.forward * Bullet, ForceMode.Impulse);
         rigidbody.AddForce(transform.up * Spread, ForceMode.Impulse);
         rigidbody.AddForce(transform.right * Spread, ForceMode.Impulse);
@@ -38,7 +40,4 @@ public class Shotgun : MonoBehaviour
             Debug.Log("Hited");
         }
     }
-
-
 }
-

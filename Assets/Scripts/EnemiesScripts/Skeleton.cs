@@ -41,8 +41,8 @@ public class Skeleton : MonoBehaviour
     private float spawnPosZ = -4;
 
     public GameObject[] enemyPrefabs;
-    private float spawnRangeX = 6;
-    private float spawnPosZ = -4;
+    //private float spawnRangeX = 6;
+    //private float spawnPosZ = -4;
 
     private void Awake()
     {

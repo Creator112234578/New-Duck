@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1404265692009148903
 Transform:
   m_ObjectHideFlags: 0
@@ -30,13 +30,13 @@ Transform:
   m_GameObject: {fileID: 2496577573048883742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -54.73, y: 19.64, z: 29.04}
-  m_LocalScale: {x: 0.010734735, y: 0.005847951, z: 0.010682474}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6676702710507418600}
   - {fileID: 7240911541462965735}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3966756817859253168
 MeshFilter:
@@ -146,13 +146,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 5809406405379763702}
-  player: {fileID: 3102492244405823374, guid: 6688b703ca184ea45906a55e77675123, type: 3}
+  player: {fileID: 242985690266632834, guid: 02e4841bda5ee7c48b8585ddeffb05b6, type: 3}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   whatIsPlayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   health: 120
   EnemyDistanceRun: 5
   walkPoint: {x: 0, y: 0, z: 0}
@@ -160,10 +160,17 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   projectile: {fileID: 691784990967806430, guid: 7a36e2ec5339f674cb1a71e51d5a7f6b,
     type: 3}
+  projectileSpeed: 35
   sightRange: 100
   attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
+  miniboss: 0
+  manki: 0
+  HoldsEnemyDashScript: {fileID: 0}
+  EnemyDashScript: {fileID: 0}
+  lightningPrefabs: []
+  enemyPrefabs: []
 --- !u!1 &3019380264250558167
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,13 +291,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.975
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ebdd695f1b49a2478343b41a595f6b0,
         type: 3}

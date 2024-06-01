@@ -39,11 +39,11 @@ public class PlayerManager : MonoBehaviour
     }
     public IEnumerator Damage (int damageAmount)
     {
-        //bloodOverlay.SetActive(true);
+        bloodOverlay.SetActive(true);
         playerHP -= damageAmount;
         if (playerHP <= 0)
             isGameOver = true;
         yield return new WaitForSeconds(1f);
-        //bloodOverlay.SetActive(false);
+        bloodOverlay.SetActive(false);
     }
 }

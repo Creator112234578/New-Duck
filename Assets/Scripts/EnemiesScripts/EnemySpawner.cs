@@ -8,6 +8,9 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> Enemies;
     public List<GameObject> EnemiesInWave;
     public List<GameObject> EnemiesInWaveSetter;
+    public GameObject[] DoorsToClose;
+    public int Count;
+    public bool DoorsClose;
     public List<List<GameObject>> EnemiesKinda;
 
     public List<int> WavesEnemieAmount;
@@ -19,6 +22,7 @@ public class EnemySpawner : MonoBehaviour
     public Transform SpawnerWaveReseter;
     void Start()
     {
+        DoorsToClose = GameObject.FindGameObjectsWithTag("Doors");
         List<GameObject> EnemiesToSpawn = new List<GameObject>();
         List<GameObject> EnemiesInWave = new List<GameObject>();
         List<List<GameObject>> EnemiesKinda = new List<List<GameObject>>();
@@ -27,6 +31,10 @@ public class EnemySpawner : MonoBehaviour
     }
     void Update()
     {
+        if (Enemies.Count == 0)
+        {
+            counterNew = false;
+        }
         foreach (GameObject Enemie in Enemies)
         {
             if (Enemie == null)
@@ -40,6 +48,15 @@ public class EnemySpawner : MonoBehaviour
             {
                 EnemiesToSpawn.Remove(Enemie2);
             }
+        }
+        if (counterNew == false)
+        {
+            foreach (GameObject n in DoorsToClose)
+            {
+                DoorsToClose[Count].SetActive(true);
+                Count += 1;
+            }
+            Count = 0;
         }
         if (counterNew == true)
         {
@@ -63,6 +80,13 @@ public class EnemySpawner : MonoBehaviour
                     counter = 0;
                 }
             }
+            foreach (GameObject n in DoorsToClose)
+            {
+                DoorsToClose[Count].GetComponent<Door>().Opened = false;
+                DoorsToClose[Count].SetActive(false);
+                Count += 1;
+            }
+            Count = 0;
         }
         
     }

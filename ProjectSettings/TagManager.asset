@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Explosives
+  - stone
+  - 'boulder '
+  - key
   layers:
   - Default
   - TransparentFX

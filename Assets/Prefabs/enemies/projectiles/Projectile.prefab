@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3190354806451440694}
   - component: {fileID: 3552723883538042982}
   - component: {fileID: 7665490756035543416}
+  - component: {fileID: 8032459283112579011}
+  - component: {fileID: 5437947511331283893}
   m_Layer: 15
   m_Name: Projectile
   m_TagString: Untagged
@@ -33,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2800085916576901301
 MeshFilter:
@@ -133,3 +135,31 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &8032459283112579011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691784990967806430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef90bbb78fb9934c9b611b285c7a36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageCount: 10
+--- !u!114 &5437947511331283893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691784990967806430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aa476ca35fd8cb42a41dc1b52b42d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 691784990967806430}
+  layer1: 8
+  layer2: 6

@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 9096775473804815029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -54.73, y: 19.64, z: 29.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7707951870290898896}
@@ -265,11 +265,17 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   projectile: {fileID: 691784990967806430, guid: 7a36e2ec5339f674cb1a71e51d5a7f6b,
     type: 3}
+  projectileSpeed: 35
   sightRange: 100
   attackRange: 1.33
   playerInSightRange: 0
   playerInAttackRange: 0
   miniboss: 1
+  manki: 0
+  HoldsEnemyDashScript: {fileID: 0}
+  EnemyDashScript: {fileID: 0}
+  lightningPrefabs: []
+  enemyPrefabs: []
 --- !u!114 &2101993136701770858
 MonoBehaviour:
   m_ObjectHideFlags: 0

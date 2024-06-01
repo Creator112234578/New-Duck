@@ -46,7 +46,7 @@ public class Skeleton : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.Find("Player 2").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 901771804509083601}
   - component: {fileID: 467710740573677616}
   - component: {fileID: 6261635213204456763}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 687200485828535638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.04, y: 24.57, z: 75.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.81133, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5877030434280788847}
@@ -38,7 +38,7 @@ Transform:
   - {fileID: 8056662479619800401}
   - {fileID: 3280846854459373663}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &368495586334271678
 MeshFilter:
@@ -109,8 +109,8 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.25
+  m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &467710740573677616
@@ -125,21 +125,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55da4bd9d894f47469185abafcf07e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 65
-  runSpeed: 125
-  airSpeed: 90
+  walkSpeed: 35
+  runSpeed: 55
+  airSpeed: 55
   Drag: 10
   speedHere: 0
   readyToJump: 0
-  jumpForce: 400
-  dashInTheAir: 0
+  jumpForce: 235
+  dashInTheAir: 1
   dashes: 3
-  dashSpeed: 45
-  DashForce: 1500
+  dashSpeed: 55
+  DashForce: 300
   DashUpwardForce: 0
   dashing: 0
   cameraRotation: {fileID: 0}
-  PlayerCam: {fileID: 0}
+  PlayerCam: {fileID: 5877030434280788847}
   DashDuration: 1.5
   dashCd: 0.12
   dashCdGlobal: 1.5
@@ -150,7 +150,7 @@ MonoBehaviour:
   playerHeight: 2.5
   GroundUNow:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   orientation: {fileID: 5877030434280788847}
   state: 0
 --- !u!54 &6261635213204456763
@@ -189,7 +189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3280846854459373663}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8056662479619800401}
   - component: {fileID: 5587287082725269728}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ CapsuleCollider:
   m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -275,7 +275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5877030434280788847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Orientation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 873872635268236446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CamPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

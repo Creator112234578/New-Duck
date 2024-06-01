@@ -186,7 +186,7 @@ MonoBehaviour:
   Bullet: 5
   Mass: 5
   kaboomRadius: 10
-  force: 100000
+  force: 1000
 --- !u!1 &9198086658230206260
 GameObject:
   m_ObjectHideFlags: 0
